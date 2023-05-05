@@ -1,0 +1,255 @@
+
+
+
+:root{
+    --color-gradient: #ccd0d5;
+    --box-shadow:0 0px 0px 0 var(--color-gradient), 0 0px 10px 0 var(--color-gradient);
+    --box-shadow1: 0 0px 0px 0 var(--color-gradient), 0 0px 10px 0 #2f3238;
+    --redondo: 15px;
+    --redondo1: 3rem;
+
+    --fuente: 22px;
+    --fuenteTitulo: 45px;
+
+    --fondo1: white;
+
+    --text-color: black;
+}
+html,body{
+    height: 100%;
+    margin: 0;
+}
+.text-center{
+    text-align: center !important;
+}
+.cursor-default{
+    cursor: default;
+}
+.border-none{
+    border-radius: 0px !important;
+}
+
+h1,h2,h3,p,a{
+    font-family: 'Manjari Thin';
+}
+
+
+/* para la barra de navegacion*/
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+    box-shadow: 0 4px 8px 0 var(--color-gradient), 0 6px 20px 0 var(--color-gradient);
+    border-radius: var(--redondo);
+    padding: 3px;
+}
+
+
+/*  contenedor del img y el titulo paos*/
+.navbar div{
+    cursor: default;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.navbar div h1{
+    margin-left: 10px;
+}
+.navbar div img {
+    width: 50px;
+    height: 50px;
+    margin-left: 10px;
+}
+
+
+
+/* contenedor de la lista de servicios navbar*/
+
+.navbar ol{
+    height: 100%;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+.navbar ol a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 5px;
+    margin-right: 5px;
+    list-style: none;
+    cursor: pointer;
+    text-decoration: none;
+    color: var(--text-color);
+    height: 100%;
+}
+.navbar ol a:active{
+    transform: scale(0.9);
+    transition-duration: 150ms;
+}
+
+
+/* para un boton*/
+.boton{
+    background: var(--fondo1);
+    color: var(--text-color);
+    border-radius: var(--redondo1);
+    font-size: var(--fuente);
+    outline: none;
+    border: none;
+    box-shadow: 0 4px 4px 0 var(--color-gradient), 0 6px 20px 0 var(--color-gradient);
+    padding: 5px;
+}
+.boton:active{
+    transform: scale(0.9);
+    transition-duration: 150ms;
+}
+
+
+/* contenedor de la seccion principal*/
+
+main{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.icono-mas-info{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.icono-mas-info img{
+    width: 250px;
+    animation: cabeza 1300ms infinite linear;
+}
+.icono-mas-info p{
+    margin-left: 20px;
+    font-size: var(--fuente);
+    width: 220px;
+    font-weight: 900;
+    
+}
+.titulo-superior{
+    left: 0;
+    right: 0;
+    margin: auto;
+    text-align: center;
+    margin: 20px;
+    font-size: var(--fuenteTitulo);
+}
+
+/* animacion de movimiento de de la cabeza del panda */
+
+@keyframes cabeza {
+    0%{ transform: rotate(-7deg); }
+    50%{ transform: rotate(7deg); }
+    100%{ transform: rotate(-7deg); }
+}
+
+
+/* para la seccion 2*/
+.seccion-2,.seccion-3,.seccion-4{
+    width: 100%;
+    height: 100%;
+    padding-top: 10px;
+}
+
+
+/*para las card de Sobre nosotros*/
+.container-card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 50px;
+}
+
+.card{
+    width: 300px;
+    margin: 10px;
+    border-radius: var(--redondo);
+    box-shadow: 0 4px 4px 0 var(--color-gradient), 0 6px 20px 0 var(--color-gradient);
+}
+.card h2,.card p{
+    padding-left: 5px;
+    padding-right: 5px;
+}
+.card h1{
+    text-align: center;
+}
+.card h2, .card p{
+    margin-top: 5px;
+    margin-bottom: 0px;
+}
+.card img{
+    width: inherit;
+    height: 150px;
+    border-radius: var(--redondo) var(--redondo) 0 0;
+}
+
+.card:active{
+    transform: scale(0.9);
+    transition-duration: 300ms;
+}
+.card:hover{
+    transform: translateY(-10px);
+    transition-duration: 300ms;
+}
+
+
+/* para las card de contacto*/
+
+.container-card-contact{
+    left: 0;
+    right: 0;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.card-contact{
+    cursor: default;
+    margin: 10px;
+    width: 300px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border-radius: var(--redondo1);
+    box-shadow: 0 4px 4px 0 var(--color-gradient), 0 6px 20px 0 var(--color-gradient);
+}
+.card-contact img{
+    width: 50px;
+    border-radius: var(--redondo1) !important;
+}
+.card-contact:hover{
+    transform: scale(1.1);
+    transition-duration: 300ms;
+}
+
+/* para el footer*/
+footer{
+    box-shadow: 0 4px 4px 0 var(--color-gradient), 0 6px 20px 0 var(--color-gradient);
+}
+.footer-info{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.footer-info img{
+    width: 50px;
+}
+.footer-info h3{
+    margin-left: 10px;
+}
+.footer-derechos{
+    text-align: center;
+    margin-top: 0px;
+    margin-bottom: 15px;
+}

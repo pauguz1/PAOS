@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PAOS</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div onclick="window.location='/'">
+            <img src="img/iconPaos.svg" alt="icono paos">
+            <h1>PAOS</h1>
+        </div>
+        <ol>
+            <a href="#sobre-nosotros">Sobre nosotros</a>
+            <a href="#servicios">Servicios</a>
+            <a href="#contacto">Contacto</a>
+        </ol>
+    </nav>
+
+
+
+    <main>
+        <div class="icono-mas-info">
+            <img src="img/iconPaos.svg" alt="icono paos">
+            <p>Holaa <br> Bienvenido a la nueva
+                forma de crear soluciones de software
+            </p>
+        </div>
+        <input class="boton" type="button" value="Muestrame" onclick="window.location='#sobre-nosotros'">
+    </main>
+
+
+
+    <section id="sobre-nosotros" class="seccion-2">
+
+        <h1 class="titulo-superior">Sobre nosotros</h1>
+
+        <div class="icono-mas-info">
+            <img src="img/iconPaos.svg" alt="icono paos">
+            <p>Somos lideres en la industria de la creacion de software
+            </p>
+        </div>
+
+        <div class="container-card">
+
+            <div class="card">
+                <img src="img/img1.png" alt="imagen EasyCar">
+                <h2>EasyCar</h2>
+                <p>Es un software para la renta de automoviles de una manerea facil</p>
+            </div>
+
+            <div class="card">
+                <img src="img/img2.png" alt="imagen CantaBly">
+                <h2>CantaBly</h2>
+                <p>Es un software para la renta de automoviles de una manerea facil</p>
+            </div>
+
+            <div class="card">
+                <img src="img/img3.png" alt="imagen ChatNow">
+                <h2>ChatNow</h2>
+                <p>Es un software para la comunicacion de equipos de trabajo</p>
+            </div>
+
+
+        </div>
+
+
+
+    </section>
+
+    <section id="servicios" class="seccion-3">
+
+        <h1 class="titulo-superior">Servicios</h1>
+
+        <div class="container-card">
+
+            <div class="card">
+                <h1>Consultoria</h1>
+                <p>Nosotros te ayudamos a potenciar tu empresa de software mediante nuestas medotologias</p>
+                <img class="border-none" src="img/consulting.png" alt="imagen Consultoria">
+                <h3 class="text-center cursor-default" onclick="window.location='#contacto'" >Muestrame</h3>
+            </div>
+
+            <div class="card">
+                <h1>Desarollo</h1>
+                <p>Nosotros desarollamos el software de tus sueños</p>
+                <img class="border-none" src="img/development.jpeg" alt="imagen Desarollo">
+                <h3 class="text-center cursor-default" onclick="window.location='#contacto'" >Muestrame</h3>
+            </div>
+
+            <div class="card">
+                <h1>Marketing</h1>
+                <p>Nosotros potenciamos tus ventas con nuestras avanzadas tecnias de martketing</p>
+                <img class="border-none" src="img/marketing.png" alt="imagen Marketing">
+                <h3 class="text-center cursor-default" onclick="window.location='#contacto'" >Muestrame</h3>
+            </div>
+
+
+        </div>
+
+    </section>
+
+    <section id="contacto" class="seccion-3">
+
+        <h1 class="titulo-superior">Contacto</h1>
+
+        <div class="container-card-contact">
+
+            <div class="card-contact">
+                <img class="border-none" src="img/mail.png" alt="imagen Marketing">
+                <h1>Contactanos</h1>
+            </div>
+
+            <div class="card-contact">
+                <img class="border-none" src="img/instagram.png" alt="imagen Marketing">
+                <h1>Contactanos</h1>
+            </div>
+
+            <div class="card-contact">
+                <img class="border-none" src="img/whats.png" alt="imagen Marketing">
+                <h1>Contactanos</h1>
+            </div>
+
+
+        </div>
+
+    </section>
+
+    <footer>
+        <div class="footer-info">
+            <img src="img/iconPaos.svg" alt="icono paos">
+            <h3>PAOS</h3>
+        </div>
+        <p class="footer-derechos">Todos los derechos reservados 2023</p>
+    </footer>
+
+    <script type="text/javascript">
+        //primero revisamos si el navegador el compatible con el service worker
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('/sw.js', {
+                scope: '/'
+            }).then(function (registration) {
+                // registro exitoso
+                
+                console.log('registro exitoso del service worker ', registration.scope);
+            }, function (err) {
+                // registro fallido
+                console.log('error al registrar el service worker', err);
+                
+            });
+        }
+    </script>
+    
+</body>
+</html>
