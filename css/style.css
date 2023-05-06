@@ -224,6 +224,10 @@ main{
     border-radius: var(--redondo1);
     box-shadow: 0 4px 4px 0 var(--color-gradient), 0 6px 20px 0 var(--color-gradient);
 }
+.card-contact h3{
+    margin: 0;
+    padding: 15px;
+}
 .card-contact img{
     width: 50px;
     border-radius: var(--redondo1) !important;
