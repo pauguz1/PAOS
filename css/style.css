@@ -99,7 +99,7 @@ h1,h2,h3,p,a{
     outline: none;
     border: none;
     box-shadow: 0 4px 4px 0 var(--color-gradient), 0 6px 20px 0 var(--color-gradient);
-    padding: 5px;
+    padding: 10px;
 }
 .boton:active{
     transform: scale(0.9);
@@ -186,6 +186,10 @@ main{
     margin-top: 5px;
     margin-bottom: 0px;
 }
+.card h3{
+    margin: 0;
+    padding: 15px;
+}
 .card img{
     width: inherit;
     height: 150px;
@@ -223,10 +227,6 @@ main{
     align-items: center;
     border-radius: var(--redondo1);
     box-shadow: 0 4px 4px 0 var(--color-gradient), 0 6px 20px 0 var(--color-gradient);
-}
-.card-contact h3{
-    margin: 0;
-    padding: 15px;
 }
 .card-contact img{
     width: 50px;
