@@ -38,7 +38,10 @@ self.addEventListener('install', e => {
             '/img/instagram.png',
             '/img/mail.png',
             '/img/marketing.png',
-            '/img/whats.png'
+            '/img/whats.png',
+
+            '/img/paul.jpg',
+            '/img/osmar.jpg'
         ]);//agregamos las paginas estaticas a agregar
     });
     console.log('instalando');
