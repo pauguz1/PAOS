@@ -107,6 +107,10 @@ h1,h2,h3,p,a{
 }
 
 
+.jump:active{
+    transform: scale(0.9);
+    transition-duration: 150ms;
+}
 /* contenedor de la seccion principal*/
 
 main{
@@ -214,6 +218,7 @@ main{
 }
 
 
+
 /* para las card de contacto*/
 
 .container-card-contact{
@@ -236,7 +241,7 @@ main{
     border-radius: var(--redondo1);
     box-shadow: 0 4px 4px 0 var(--color-gradient), 0 6px 20px 0 var(--color-gradient);
 }
-.card-contact img{
+.card-contact img,.card-contact-mail div img{
     width: 50px;
     border-radius: var(--redondo1) !important;
 }
@@ -244,6 +249,61 @@ main{
     transform: scale(1.1);
     transition-duration: 300ms;
 }
+.card-contact-mail:hover{
+    transform: scale(1.1);
+    transition-duration: 300ms;
+}
+
+.card-contact-mail{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: var(--redondo1);
+    box-shadow: 0 4px 4px 0 var(--color-gradient), 0 6px 20px 0 var(--color-gradient);
+}
+.card-contact-mail h2{
+    margin: 0;
+    margin-left: 15px;
+    margin-right: 15px;
+    align-self: self-start;
+}
+.card-contact-mail input{
+    width: 80%;
+    padding-left: 4%;
+    padding-right: 4%;
+    margin-left: 6%;
+    margin-right: 6%;
+    font-size: var(--fuente);
+    border: none;
+    outline: none;
+    border-radius: var(--redondo1);
+    box-shadow: 0 4px 4px 0 var(--color-gradient), 0 6px 20px 0 var(--color-gradient);
+}
+.card-contact-mail div{
+    cursor: default;
+    margin: 10px;
+    width: 300px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.card-contact-mail div input{
+    width: 80%;
+}
+.container-send{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    
+}
+.container-send img{
+    width: 50px;
+}
+
+
+
 .card-content h3{
     padding: 0px;
     padding-left: 15px !important;
@@ -257,6 +317,9 @@ main{
     padding-right: 15px !important;
     font-weight: 300;
 }
+
+
+
 
 /* para el footer*/
 footer{
@@ -279,7 +342,22 @@ footer{
     margin-bottom: 15px;
 }
 
-
+/* para el modal */
+.modal{
+    position: fixed;
+    inset: 0 0 0 0;
+    margin: auto;
+    height: fit-content;
+    width: fit-content;
+    background: var(--fondo1);
+    border-radius: var(--redondo1);
+    box-shadow: 0 4px 4px 0 var(--color-gradient), 0 6px 20px 0 var(--color-gradient);
+}
+.modal h1{
+    font-size: var(--fuente);
+    padding: 15px;
+    text-align: center;
+}
 
 /* Teléfonos */
 @media only screen and (max-width: 575px){

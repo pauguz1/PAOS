@@ -39,6 +39,7 @@ self.addEventListener('install', e => {
             '/img/mail.png',
             '/img/marketing.png',
             '/img/whats.png',
+            '/img/iconSend.png',
 
             '/img/paul.jpg',
             '/img/osmar.jpg'

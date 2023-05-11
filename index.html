@@ -208,9 +208,17 @@
 
         <div class="container-card-contact">
 
-            <div class="card-contact">
-                <img class="border-none" src="img/mail.png" alt="imagen Marketing">
-                <h1>Contactanos</h1>
+            <div class="card-contact-mail">
+                <div>
+                    <img class="border-none" src="img/mail.png" alt="imagen Marketing">
+                    <h1>Contactanos</h1>
+                </div>
+                <h2>Correo</h2>
+                <input type="email" placeholder="Correo">
+                <div class="container-send">
+                    <input type="text" placeholder="Escribemos">
+                    <img onclick="enviarCorreo()" class="jump" src="img/iconSend.png" alt="Icono enviar">
+                </div>
             </div>
 
             <div class="card-contact">
@@ -251,6 +259,41 @@
                 
             });
         }
+
+        /*
+            Este metodo muestra un mensaje simulando que se envio el correo
+        */
+        function enviarCorreo(){
+            //limpiamos la caja de texto
+            var correo = document.querySelector('.card-contact-mail').children[2];
+            var mensaje  = document.querySelector('.card-contact-mail').children[3].children[0];
+            if(mensaje.value != '' && correo.value != ''){//si los campos estan llenos entonces enviamos el correo falso
+                correo.value = '';
+                mensaje.value = '';
+                var modal = document.createElement('div');
+                modal.id = 'modal-correo';
+                modal.classList.add('modal');
+                modal.innerHTML = '<h1> Pronto te responderemos</h1>';
+                document.body.appendChild(modal);
+                setTimeout(function(){document.getElementById(modal.id).remove()},1800);//agregamos el el tiempo en el cual se cerrara el mensaje
+            }else{//si los campos estan vacios entonces pedimos que se llenen todos los campos
+                var modal = document.createElement('div');
+                modal.id = 'modal-correo';
+                modal.classList.add('modal');
+                modal.innerHTML = '<h1> Falta rellenar campos</h1>';
+                document.body.appendChild(modal);
+                setTimeout(function(){document.getElementById(modal.id).remove()},1800);//agregamos el el tiempo en el cual se cerrara el mensaje
+            }
+        }
+
+
+        var inputMensajeCorreo = document.querySelector('.card-contact-mail').children[3].children[0];
+        inputMensajeCorreo.addEventListener('keypress', (key) =>{
+            let tecla = (document.all) ? key.keyCode : key.which;
+            if(tecla == 13){// si se presiona la tecla enter entonces se envia el mensaje
+                enviarCorreo();
+            }
+        });
     </script>
     
 </body>
