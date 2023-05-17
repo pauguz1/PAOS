@@ -16,10 +16,9 @@
         </div>
         <ol>
             <a href="#acerca-de">Acerca de</a>
-            <a href="#contacto">Contacto</a>
-            <a href="#recurso-humano">recurso humano</a>
             <a href="#servicios">Servicios</a>
-            
+            <a href="#recurso-humano">recurso humano</a>
+            <a href="#contacto">Contacto</a>
         </ol>
     </nav>
 
@@ -32,7 +31,7 @@
                 forma de crear soluciones de software
             </p>
         </div>
-        <input class="boton" type="button" value="Muestrame" onclick="window.location='#sobre-nosotros'">
+        <input class="boton" type="button" value="Muestrame" onclick="window.location='#servicios'">
     </main>
 
     <section id="acerca-de" class="seccion-1">
@@ -43,17 +42,28 @@
 
             <div class="card">
                 <h1>Misión</h1>
-                <p>Nosotros te ayudamos a potenciar tu empresa de software mediante nuestas medotologias</p>
+                <p>Ofrecer productos que destaquen por su facilidad de uso, potencia y capacidad de
+adaptación a múltiples actividades y a los nuevos entornos operativos, apostando por
+ofrecer el mejor servicio orientado al cliente, con un equipo altamente cualificado.</p>
             </div>
 
             <div class="card">
                 <h1>Visión</h1>
-                <p>Nosotros desarollamos el software de tus sueños</p>
+                <p>Posicionar a PAOS como el principal proveedor de sistemas de software de diseño
+superior en México mientras mantenemos nuestros valores y principios.</p>
             </div>
 
             <div class="card">
                 <h1>Valores</h1>
-                <p>Nosotros potenciamos tus ventas con nuestras avanzadas tecnias de martketing</p>
+                <p>-Respeto al medio ambiente<br>
+-Responsabilidad<br>
+-Calidad<br>
+-Honestidad<br>
+-Colaboración<br>
+-Comunicación<br>
+-Solidaridad<br>
+-Transparencia<br>
+-Pasión</p>
             </div>
 
 
@@ -98,7 +108,7 @@
                     <p>Inteligencia artificial</p>
                     <p>Seguridad informatica</p>
                 </div>
-                
+
             </div>
 
             <div class="card">
@@ -205,7 +215,7 @@
     <section id="contacto" class="seccion-4">
 
         <h1 class="titulo-superior">Contacto</h1>
-        
+
 
         <div class="container-card-contact">
 
@@ -252,12 +262,12 @@
                 scope: '/'
             }).then(function (registration) {
                 // registro exitoso
-                
+
                 console.log('registro exitoso del service worker ', registration.scope);
             }, function (err) {
                 // registro fallido
                 console.log('error al registrar el service worker', err);
-                
+
             });
         }
 
@@ -296,6 +306,6 @@
             }
         });
     </script>
-    
+
 </body>
 </html>
